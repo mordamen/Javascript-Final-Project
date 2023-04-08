@@ -1,0 +1,26 @@
+.toast-icon {
+    width: 2rem;
+}
+
+#toast-wrapper {
+    position: fixed !important;
+    left: 36rem;
+    
+    @include for-size(big-desktop){
+        left: 10rem;
+    }
+    @include for-size(desktop){
+        left: 26.5rem;
+    }
+
+    @include for-size(tablet-landscape)
+    {
+        left: 20rem;
+    }
+    @include for-size(tablet-portrait){
+        left: 12rem;
+    }
+    >div{
+        background-color: #fff;
+    }
+}

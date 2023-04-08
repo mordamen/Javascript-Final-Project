@@ -1,0 +1,203 @@
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $size == big-desktop {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+#logo {
+  width: 5vw;
+}
+
+.asterisk {
+  color: red;
+}
+
+.search_line {
+  margin-left: 0.55em;
+}
+
+.home-btn-option {
+  margin-bottom: 0.3rem;
+}
+
+#homeDisplaySortASC {
+  margin-right: 0.3rem;
+}
+
+// --------------------------------------------------------------------------
+
+.testing-border {
+  border: 1px solid red !important;
+}
+
+#shop-page {
+  flex-direction: column;
+}
+// --------------------------------------------------------------------------
+
+$main-text: white;
+$navbar-height: 6rem;
+
+// --------------------------------------------------------------------------
+//Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// --------------------------------------------------------------------------
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// --------------------------------------------------------------------------
+.setup-grid {
+  display: grid;
+  grid-template-rows: 5% 90% 5%;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "Body Body Body"
+    "Footer Footer Footer";
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  grid-area: Header;
+}
+
+main {
+  grid-area: Body;
+}
+
+footer {
+  grid-area: Footer;
+}
+
+// --------------------------------------------------------------------------
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+// --------------------------------------------------------------------------
+@font-face {
+  font-family: Beleren;
+  src: url(../assets/fonts/typeface-beleren-bold-master/Beleren2016-Bold.woff);
+}
+// --------------------------------------------------------------------------
+
+// Controls what the current active page is
+.active-page {
+  display: flex;
+  // min-height: 95vh;
+}
+
+// Controls what the current inactive pages are
+.inactive-page {
+  display: none;
+}
+// --------------------------------------------------------------------------
+
+hr {
+  height: 0.15em;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 68, 255),
+    rgba(0, 102, 255, 0)
+  );
+  border: none;
+  opacity: 100% !important;
+}
+
+.main-section {
+  // height: 95vh;
+  align-items: center;
+  display: flex;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.home-btn-option {
+  margin-bottom: 0.3rem;
+}
+
+#homeDisplaySortASC {
+  margin-right: 0.3rem;
+}
+// --------------------------------------------------------------------------
+// Prefixes for any flexbox needed, as recommended on https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+.wrapper {
+  @include flexbox();
+}
+
+.item {
+  @include flex(1 200px);
+  @include order(2);
+}

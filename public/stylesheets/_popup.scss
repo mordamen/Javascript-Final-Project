@@ -1,0 +1,30 @@
+.popup-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000008d;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.popup-input {
+    padding-bottom: 1em;
+}
+
+#editPicturesPopupCancelBtn {
+    position: absolute;
+    right:  0;
+    bottom: 0;
+    height: 100%;
+}
+
+.editPictureCardBody {
+    height: 18.75rem;
+}
+
+#editPicturesPopupImgDisplay{
+    height: 18.75rem;
+    width:  18.75rem;
+}
+

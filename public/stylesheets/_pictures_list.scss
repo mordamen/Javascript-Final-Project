@@ -1,0 +1,40 @@
+.PicTextContent{
+    word-wrap: break-word;
+}
+
+.picture-list-text {
+    @include for-size(tablet-portrait){
+        text-align:center;
+    }
+}
+
+.picture-list-img {
+    @include for-size(tablet-portrait){
+        display:flex;
+        justify-content: center;
+    }
+}
+
+.picture-list-header, .desktopAdminBtns {
+    @include for-size(tablet-portrait){
+        display:none;
+    }
+}
+
+.mobileAdminBtns {
+    @include for-size(big-desktop){
+        display:none;
+    }
+    @include for-size(desktop){
+        display:none;
+    }
+
+    @include for-size(tablet-landscape)
+    {
+        display:none;
+    }
+    @include for-size(tablet-portrait){
+        display:flex !important;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,44 @@
+@media (max-width: 991px) {
+  .responsive-mt {
+    margin-top: 0.9rem;
+  }
+
+  .responsive-nav-flex {
+    flex-direction: column;
+  }
+}
+
+header {
+  // backdrop-filter: blur(15px);
+  // min-width: 100% !important;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: $navbar-height;
+}
+
+.navbar {
+  background-color: transparent !important;
+  font-family: Beleren;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  width: 100vh;
+  // Color the Navbar Text
+  --bs-navbar-color: white;
+
+  // Color the Navbar Text on Hover
+  --bs-navbar-hover-color: yellow;
+  // Color the Active Navbar Text
+  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+}
+
+.nav-link {
+  margin: auto;
+}
