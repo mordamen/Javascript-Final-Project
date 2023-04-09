@@ -71,36 +71,10 @@ body::-webkit-scrollbar {
 }
 
 // --------------------------------------------------------------------------
-.setup-grid {
-  display: grid;
-  grid-template-rows: 5% 90% 5%;
-  grid-auto-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Header Header Header"
-    "Body Body Body"
-    "Footer Footer Footer";
-}
-
-body {
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-}
-
-header {
-  grid-area: Header;
-}
 
 main {
-  grid-area: Body;
+  min-height: 100vh;
 }
-
-footer {
-  grid-area: Footer;
-}
-
-// --------------------------------------------------------------------------
 
 section {
   display: flex;
@@ -108,12 +82,14 @@ section {
   align-items: center;
   width: 100%;
   margin: auto;
-  min-height: 90vh;
+  min-height: 95vh;
 }
 
 footer {
   text-align: center;
   height: 5vh;
+  background-color: transparent;
+  margin: auto;
 }
 
 .container {
