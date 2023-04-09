@@ -114,6 +114,10 @@ section {
   margin: auto;
 }
 
+.container {
+  flex-direction: column;
+}
+
 // --------------------------------------------------------------------------
 @font-face {
   font-family: Beleren;

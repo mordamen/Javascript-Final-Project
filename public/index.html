@@ -58,287 +58,282 @@
   </head>
 
   <body>
-    <div class="container">
-      <!-- ---------------------------- NAVBAR ------------------------------------------- -->
-      <header class="container d-flex">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <!-- Branded Logo: -->
-            <a class="navbar-brand" href="index.html" id="nav-brand">
-              <img
-                src="./assets/images/website-logo.webp"
-                alt="website logo"
-                width="64"
-                height="64"
-              />
-            </a>
-            <!-- Responsive Toggle for Smaller screens: -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="offcanvas offcanvas-end"
-              tabindex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                  Offcanvas
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <!-- ------------------------------ NAV ITEMS  ------------------------------- -->
-              <div class="offcanvas-body">
-                <div class="navbar-nav me-auto my-lg-0">
-                  <!-- ---------------------------- HOME  ---------------------------------- -->
-                  <div class="navbar-nav">
-                    <a
-                      class="nav-link"
-                      aria-current="page"
-                      href="#"
-                      id="nav-home-link"
-                      >Home</a
-                    >
-                  </div>
-                  <!-- ---------------------------- ABOUT US  ------------------------------ -->
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="#" id="nav-aboutus-link">About</a>
-                  </div>
-                  <!-- ---------------------------- SHOP  ---------------------------------- -->
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="#" id="nav-shop-link">Shop</a>
-                  </div>
-                  <!-- ---------------------------- CONTACT US  ---------------------------- -->
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="#" id="nav-contactus-link"
-                      >Contact Us</a
-                    >
-                  </div>
-                  <!-- ---------------------------- AFTER USER LOGIN ----------------------- -->
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="#" id="nav-favorite-pictures-link"
-                      >Favorites</a
-                    >
-                  </div>
-                  <!-- Add New Image Link -->
-                  <div class="navbar-nav">
-                    <a class="nav-link" href="#" id="nav-add-new-picture-link"
-                      >Add new picture</a
-                    >
-                  </div>
-                </div>
-                <!--  -->
+    <!-- ---------------------------- NAVBAR ------------------------------------------- -->
+    <header class="container d-flex">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- Branded Logo: -->
+          <a class="navbar-brand" href="index.html" id="nav-brand">
+            <img
+              src="./assets/images/website-logo.webp"
+              alt="website logo"
+              width="64"
+              height="64"
+            />
+          </a>
+          <!-- Responsive Toggle for Smaller screens: -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- ------------------------------ NAV ITEMS  ------------------------------- -->
+            <div class="offcanvas-body">
+              <div class="navbar-nav me-auto my-lg-0">
+                <!-- ---------------------------- HOME  ---------------------------------- -->
                 <div class="navbar-nav">
-                  <!-- ------------------------ BEFORE USER LOGIN ------------------------- -->
-                  <form
-                    class="d-flex responsive-nav-flex"
-                    role="search"
-                    id="navBeforeLogin"
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#"
+                    id="nav-home-link"
+                    >Home</a
                   >
-                    <!-- Sign In Link -->
-                    <a
-                      class="nav-link responsive-mt"
-                      href="#"
-                      id="nav-login-link"
-                      >Sign In</a
-                    >
-                    <!-- Sign Up Button -->
-                    <button
-                      class="btn btn-outline-success"
-                      type="submit"
-                      id="nav-register-link"
-                    >
-                      Sign Up for Free
-                    </button>
-                  </form>
-                  <!-- ------------------------ AFTER USER LOGIN ------------------------- -->
-                  <form
-                    class="d-flex responsive-nav-flex d-none"
-                    role="search"
-                    id="navAfterLogin"
-                  >
-                    <!-- Profile Page Link -->
-                    <i class="bi bi-person-circle"></i>
-                    <a class="nav-link me-3" href="#" id="nav-edit-profile-page"
-                      >Name</a
-                    >
-                    <!-- Logout Link -->
-                    <a class="nav-link responsive-mt" href="#" id="nav-logout"
-                      >Logout</a
-                    >
-                  </form>
                 </div>
-                <!-- --------------------------------------------------------------- -->
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <main>
-        <!-- ------------------------ TOAST MESSAGE -------------------------------------- -->
-        <div class="toast-container position-static" id="toast-wrapper"></div>
-        <!-- -------------- Popup Section For editing/creating new pictures -------------- -->
-        <div
-          class="popup-wrapper d-flex justify-content-center align-items-center d-none"
-          id="editPicturesPopup"
-        >
-          <div class="popup-div" id="editPicturesPopupChild">
-            <div class="container">
-              <div
-                class="card text-center d-flex justify-content-between"
-                id="editPicturesPopupHeaderAndCancel"
-              >
-                <h3 id="popupHeader">
-                  EDIT PICTURE FORM
-                  <button
-                    type="button"
-                    class="btn btn-danger"
-                    id="editPicturesPopupCancelBtn"
+                <!-- ---------------------------- ABOUT US  ------------------------------ -->
+                <div class="navbar-nav">
+                  <a class="nav-link" href="#" id="nav-aboutus-link">About</a>
+                </div>
+                <!-- ---------------------------- SHOP  ---------------------------------- -->
+                <div class="navbar-nav">
+                  <a class="nav-link" href="#" id="nav-shop-link">Shop</a>
+                </div>
+                <!-- ---------------------------- CONTACT US  ---------------------------- -->
+                <div class="navbar-nav">
+                  <a class="nav-link" href="#" id="nav-contactus-link"
+                    >Contact Us</a
                   >
-                    <i class="bi bi-x-circle-fill"></i>
-                  </button>
-                </h3>
-              </div>
-            </div>
-            <div class="container d-flex">
-              <!--Picture Characteristics Card-->
-              <div class="card" id="primaryPictureDetailsCard">
-                <div class="card-body editPictureCardBody">
-                  <h5 class="card-title">
-                    <div class="form-floating mb-3">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="editPicturesPopupUrl"
-                        placeholder="URL"
-                      />
-                      <label for="editPicturesPopupUrl">URL</label>
-                    </div>
-                  </h5>
-                  <div class="card-text">
-                    <div class="form-floating popup-input">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="editPicturesPopupAlt"
-                        placeholder="alt"
-                      />
-                      <label for="editPicturesPopupAlt">alt</label>
-                    </div>
-                    <div class="form-floating popup-input">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="editPicturesPopupCredit"
-                        placeholder="credit"
-                      />
-                      <label for="editPicturesPopupCredit">credit</label>
-                    </div>
-                    <div class="form-floating popup-input">
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="editPicturesPopupPrice"
-                        placeholder="price"
-                      />
-                      <label for="editPicturesPopupPrice">price</label>
-                    </div>
-                  </div>
+                </div>
+                <!-- ---------------------------- AFTER USER LOGIN ----------------------- -->
+                <div class="navbar-nav">
+                  <a class="nav-link" href="#" id="nav-favorite-pictures-link"
+                    >Favorites</a
+                  >
+                </div>
+                <!-- Add New Image Link -->
+                <div class="navbar-nav">
+                  <a class="nav-link" href="#" id="nav-add-new-picture-link"
+                    >Add new picture</a
+                  >
                 </div>
               </div>
-              <!--Extra Details section-->
-              <div class="card">
-                <div class="card-body editPictureCardBody">
-                  <div class="form-floating popup-input">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="editPicturesPopupCreatedAt"
-                      placeholder="created at"
-                      readonly="true"
-                    />
-                    <label
-                      for="editPicturesPopupCreatedAt"
-                      id="editPicturesPopupCreatedAtLabel"
-                      >created at</label
-                    >
-                  </div>
-                  <div class="form-floating popup-input">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="editPicturesPopupDescription"
-                      placeholder="description"
-                    />
-                    <label for="editPicturesPopupDescription"
-                      >description</label
-                    >
-                  </div>
-                  <div class="form-floating popup-input">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="editPicturesPopupTitle"
-                      placeholder="title"
-                    />
-                    <label
-                      for="editPicturesPopupTitle"
-                      id="editPicturesPopupTitleLabel"
-                      >title</label
-                    >
-                  </div>
-                  <div class="form-floating popup-input">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="editPicturesPopupSubtitle"
-                      placeholder="subtitle"
-                    />
-                    <label for="editPicturesPopupSubtitle">subtitle</label>
-                  </div>
-                </div>
-              </div>
-              <!--Image Preview card-->
-              <div class="card">
-                <img
-                  class="img-fluid"
-                  src=""
-                  class="card-img-top"
-                  alt=""
-                  id="editPicturesPopupImgDisplay"
-                />
-              </div>
-            </div>
-            <div class="container">
-              <div class="card text-center" id="editPicturesSaveBtnDiv">
-                <button
-                  type="button"
-                  class="btn btn-success"
-                  id="editPicturesPopupSaveBtn"
+              <!--  -->
+              <div class="navbar-nav">
+                <!-- ------------------------ BEFORE USER LOGIN ------------------------- -->
+                <form
+                  class="d-flex responsive-nav-flex"
+                  role="search"
+                  id="navBeforeLogin"
                 >
-                  <i class="bi bi-check-circle-fill"></i> Save
-                </button>
+                  <!-- Sign In Link -->
+                  <a class="nav-link responsive-mt" href="#" id="nav-login-link"
+                    >Sign In</a
+                  >
+                  <!-- Sign Up Button -->
+                  <button
+                    class="btn btn-outline-success"
+                    type="submit"
+                    id="nav-register-link"
+                  >
+                    Sign Up for Free
+                  </button>
+                </form>
+                <!-- ------------------------ AFTER USER LOGIN ------------------------- -->
+                <form
+                  class="d-flex responsive-nav-flex d-none"
+                  role="search"
+                  id="navAfterLogin"
+                >
+                  <!-- Profile Page Link -->
+                  <i class="bi bi-person-circle"></i>
+                  <a class="nav-link me-3" href="#" id="nav-edit-profile-page"
+                    >Name</a
+                  >
+                  <!-- Logout Link -->
+                  <a class="nav-link responsive-mt" href="#" id="nav-logout"
+                    >Logout</a
+                  >
+                </form>
               </div>
+              <!-- --------------------------------------------------------------- -->
             </div>
           </div>
         </div>
-        <!-- ---------------------------- HOME PAGE  ------------------------------------- -->
-        <section id="home-page" class="d-flex">
+      </nav>
+    </header>
+
+    <main>
+      <!-- ------------------------ TOAST MESSAGE -------------------------------------- -->
+      <div class="toast-container position-static" id="toast-wrapper"></div>
+      <!-- -------------- Popup Section For editing/creating new pictures -------------- -->
+      <div
+        class="popup-wrapper d-flex justify-content-center align-items-center d-none"
+        id="editPicturesPopup"
+      >
+        <div class="popup-div" id="editPicturesPopupChild">
+          <div class="container">
+            <div
+              class="card text-center d-flex justify-content-between"
+              id="editPicturesPopupHeaderAndCancel"
+            >
+              <h3 id="popupHeader">
+                EDIT PICTURE FORM
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  id="editPicturesPopupCancelBtn"
+                >
+                  <i class="bi bi-x-circle-fill"></i>
+                </button>
+              </h3>
+            </div>
+          </div>
+          <div class="container d-flex">
+            <!--Picture Characteristics Card-->
+            <div class="card" id="primaryPictureDetailsCard">
+              <div class="card-body editPictureCardBody">
+                <h5 class="card-title">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editPicturesPopupUrl"
+                      placeholder="URL"
+                    />
+                    <label for="editPicturesPopupUrl">URL</label>
+                  </div>
+                </h5>
+                <div class="card-text">
+                  <div class="form-floating popup-input">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editPicturesPopupAlt"
+                      placeholder="alt"
+                    />
+                    <label for="editPicturesPopupAlt">alt</label>
+                  </div>
+                  <div class="form-floating popup-input">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editPicturesPopupCredit"
+                      placeholder="credit"
+                    />
+                    <label for="editPicturesPopupCredit">credit</label>
+                  </div>
+                  <div class="form-floating popup-input">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="editPicturesPopupPrice"
+                      placeholder="price"
+                    />
+                    <label for="editPicturesPopupPrice">price</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Extra Details section-->
+            <div class="card">
+              <div class="card-body editPictureCardBody">
+                <div class="form-floating popup-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editPicturesPopupCreatedAt"
+                    placeholder="created at"
+                    readonly="true"
+                  />
+                  <label
+                    for="editPicturesPopupCreatedAt"
+                    id="editPicturesPopupCreatedAtLabel"
+                    >created at</label
+                  >
+                </div>
+                <div class="form-floating popup-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editPicturesPopupDescription"
+                    placeholder="description"
+                  />
+                  <label for="editPicturesPopupDescription">description</label>
+                </div>
+                <div class="form-floating popup-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editPicturesPopupTitle"
+                    placeholder="title"
+                  />
+                  <label
+                    for="editPicturesPopupTitle"
+                    id="editPicturesPopupTitleLabel"
+                    >title</label
+                  >
+                </div>
+                <div class="form-floating popup-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editPicturesPopupSubtitle"
+                    placeholder="subtitle"
+                  />
+                  <label for="editPicturesPopupSubtitle">subtitle</label>
+                </div>
+              </div>
+            </div>
+            <!--Image Preview card-->
+            <div class="card">
+              <img
+                class="img-fluid"
+                src=""
+                class="card-img-top"
+                alt=""
+                id="editPicturesPopupImgDisplay"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <div class="card text-center" id="editPicturesSaveBtnDiv">
+              <button
+                type="button"
+                class="btn btn-success"
+                id="editPicturesPopupSaveBtn"
+              >
+                <i class="bi bi-check-circle-fill"></i> Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ---------------------------- HOME PAGE  ------------------------------------- -->
+      <section id="home-page" class="d-flex">
+        <div class="container d-flex">
           <div class="empty"></div>
           <div class="main-section" id="home-page-hero">
             <video autoplay muted loop id="myVideo">
@@ -450,9 +445,11 @@
               </div>
             </div>
           </div>
-        </section>
-        <!-- ---------------------------- SHOP PAGE  ------------------------------------- -->
-        <section id="shop-page" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- SHOP PAGE  ------------------------------------- -->
+      <section id="shop-page" class="d-none">
+        <div class="container d-flex">
           <div class="empty"></div>
           <div id="shop-filter" class="d-flex justify-content-between">
             <div class="container">
@@ -547,9 +544,11 @@
               </button>
             </div>
           </div>
-        </section>
-        <!-- ---------------------------- ABOUT PAGE  ------------------------------------ -->
-        <section id="about-us" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- ABOUT PAGE  ------------------------------------ -->
+      <section id="about-us" class="d-none">
+        <div class="container d-flex">
           <div class="empty"></div>
           <div class="image-aboutus-banner">
             <div class="container">
@@ -810,9 +809,11 @@
               </div>
             </div>
           </div>
-        </section>
-        <!-- ---------------------------- CONTACT US PAGE  ------------------------------- -->
-        <section id="contact-us-page" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- CONTACT US PAGE  ------------------------------- -->
+      <section id="contact-us-page" class="d-none">
+        <div class="container d-flex">
           <div class="empty"></div>
           <h1>Contact us</h1>
 
@@ -888,9 +889,11 @@
               id="submitSuccessMessage"
             ></div>
           </form>
-        </section>
-        <!-- ---------------------------- REGISTER PAGE  --------------------------------- -->
-        <section id="register-page" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- REGISTER PAGE  --------------------------------- -->
+      <section id="register-page" class="d-none">
+        <div class="container d-flex">
           <div class="empty"></div>
           <form id="register-form" onsubmit="event.preventDefault()">
             <div class="container">
@@ -1179,9 +1182,11 @@
               </div>
             </div>
           </form>
-        </section>
-        <!-- ---------------------------- lOGIN PAGE  ------------------------------------ -->
-        <section id="login-page" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- lOGIN PAGE  ------------------------------------ -->
+      <section id="login-page" class="d-none">
+        <div class="container d-flex">
           <div class="main-section center-form" id="login-main">
             <div class="form-box page-form">
               <div class="form-value">
@@ -1252,69 +1257,11 @@
               </div>
             </div>
           </div>
-          <!-- -----------------------------Harel Code------------------------------------ -->
-          <!-- <h1>Login page</h1> -->
-          <!-- <form id="login-form" onsubmit="event.preventDefault()">
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="login-input-email"
-                placeholder="name@example.com"
-              />
-              <label for="login-input-email">Email address</label>
-            </div>
-            <div
-              class="alert alert-danger d-none"
-              role="alert"
-              id="login-alert-email"
-            >
-              Email Rules
-            </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control"
-                id="login-input-password"
-                placeholder="Password"
-              />
-              <label for="login-input-password">Password</label>
-            </div>
-            <div
-              class="alert alert-danger d-none"
-              role="alert"
-              id="login-alert-password"
-            >
-              Password Rules
-            </div>
-            <div class="login-not-register-text-and-button">
-              <span>
-                Not registered yet?
-                <a id="login-goto-register-page">Click here...</a>
-              </span>
-            </div>
-
-            <div class="row mb-2">
-              <button class="btn btn-success login-btn" id="login-btn">
-                Login
-              </button>
-              <div
-                class="alert alert-success d-none"
-                role="alert"
-                id="login-msg"
-              >
-                Login success
-              </div>
-            </div>
-            <div class="row mb-2">
-              <button class="btn btn-danger login-btn" id="login-cancel-btn">
-                Cancel
-              </button>
-            </div>
-          </form> -->
-        </section>
-        <!-- ---------------------------- PROFILE PAGE  ---------------------------------- -->
-        <section id="profile-page" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- PROFILE PAGE  ---------------------------------- -->
+      <section id="profile-page" class="d-none">
+        <div class="container d-flex">
           <form id="profile-form" onsubmit="event.preventDefault()">
             <div class="container">
               <div class="row">
@@ -1602,9 +1549,11 @@
               </div>
             </div>
           </form>
-        </section>
-        <!-- ---------------------------- FAVORITES PAGE  -------------------------------- -->
-        <section id="favorite-pics-page" class="d-none">
+        </div>
+      </section>
+      <!-- ---------------------------- FAVORITES PAGE  -------------------------------- -->
+      <section id="favorite-pics-page" class="d-none">
+        <div class="container d-flex">
           <div class="empty"></div>
           <div id="favorites-page">
             <div
@@ -1612,25 +1561,22 @@
               id="favorite-pictures-page-gallery"
             ></div>
           </div>
-        </section>
-        <!-- ---------------------------- 404 PAGE  -------------------------------------- -->
-        <section id="page-not-found-page" class="d-none">
-          <div class="container">
-            <div class="row">
-              <h3>Page Not Found</h3>
-            </div>
-            <div class="row">
-              <a href="" id="404-return-to-home-page-link"
-                >click here to return to homepage...</a
-              >
-            </div>
+        </div>
+      </section>
+      <!-- ---------------------------- 404 PAGE  -------------------------------------- -->
+      <section id="page-not-found-page" class="d-none">
+        <div class="container">
+          <div class="row">
+            <h3>Page Not Found</h3>
           </div>
-        </section>
-      </main>
-      <footer
-        id="sticky-footer"
-        class="flex-shrink-0 py-4 bg-dark text-white-50 mt-auto"
-      >
+          <div class="row">
+            <a href="" id="404-return-to-home-page-link"
+              >click here to return to homepage...</a
+            >
+          </div>
+        </div>
+      </section>
+      <footer id="sticky-footer" class="flex-shrink-0 py-4 mt-auto">
         <div class="container text-center">
           <p>©️Yehuda Sapir</p>
           <p>
@@ -1641,7 +1587,8 @@
           </p>
         </div>
       </footer>
-    </div>
+    </main>
+
     <script src="../src/app.js" type="module"></script>
   </body>
 </html>

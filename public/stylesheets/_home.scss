@@ -1,7 +1,10 @@
 #home-page {
-  flex-direction: column;
   min-width: 100%;
   min-height: 100%;
+
+  .container {
+    flex-direction: column;
+  }
 }
 
 #home-page video {
@@ -15,9 +18,10 @@
 }
 
 #home-page-hero {
-  height: 95vh;
+  height: 90vh;
   display: flex;
   align-items: flex-end;
+  margin: auto;
 
   .hero-section {
     position: relative;

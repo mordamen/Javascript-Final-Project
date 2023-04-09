@@ -1,0 +1,44 @@
+main {
+  #home-page {
+    background-color: darkblue;
+  }
+
+  #shop-page {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // Tints the background Image so the rest of the website is more legible:
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/images/background-index.webp");
+  }
+
+  #about-us {
+    background: url("../assets/images/background-image.webp") no-repeat center;
+    background-size: cover;
+  }
+
+  #contact-us-page {
+    background-color: purple;
+  }
+
+  #register-page {
+    background-color: green;
+  }
+
+  #login-page {
+    background: url("../assets/images/background-image.webp") no-repeat center;
+    background-size: cover;
+  }
+
+  #profile-page {
+    background-color: red;
+  }
+
+  #favorite-pics-page {
+    background-color: yellow;
+  }
+
+  #page-not-found-page {
+    background-color: black;
+  }
+}
