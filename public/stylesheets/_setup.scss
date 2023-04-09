@@ -89,7 +89,7 @@ header {
 
 section {
   min-height: 100vh;
-  background-image: url("../images/background.jpg");
+
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -100,15 +100,6 @@ section {
   width: 100%;
   margin: auto;
 }
-
-footer {
-  height: $footer-height;
-
-  text-align: center;
-  background-color: transparent;
-  margin: auto;
-}
-
 // Style for footer
 footer {
   background-size: cover;
@@ -121,28 +112,26 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: transparent;
 
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  transition: opacity 0.5s ease-in-out;
+
+  text-align: center;
+  background-color: transparent;
+  margin: auto;
 }
 
 /* Hide the footer when the content is longer than the viewport height */
-#home-page:after,
-#shop-page:after,
-#about-us:after,
-#contact-us-page:after,
-#register-page:after,
-#login-page:after,
-#profile-page:after,
-#favorite-pics-page:after,
-#page-not-found-page:after {
+section:after {
   content: "";
-  display: block;
-  height: 100px; /* adjust to the height of your footer */
+  display: none !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footer-height; /* adjust to the height of your footer */
 }
 
 .container {
