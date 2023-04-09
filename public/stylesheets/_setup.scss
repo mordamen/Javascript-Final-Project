@@ -41,13 +41,6 @@
 }
 
 $main-text: white;
-$navbar-height: 10vh;
-
-// This class is attached to a div that adds some empty space in order to align the start of each page with the header (which is currently positioned as absolute)
-
-.empty {
-  height: $navbar-height;
-}
 
 // --------------------------------------------------------------------------
 
@@ -72,28 +65,94 @@ body::-webkit-scrollbar {
 
 // --------------------------------------------------------------------------
 
-main {
-  min-height: 100vh;
+// Define section height
+$section-height: 100vh;
+
+// Define footer height
+$footer-height: 60px;
+
+// Define header height
+$header-height: 10vh;
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: $header-height;
 }
 
 section {
+  min-height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: auto;
-  min-height: 95vh;
 }
 
 footer {
+  height: $footer-height;
+
   text-align: center;
-  // height: 5vh;
   background-color: transparent;
   margin: auto;
 }
 
+// Style for footer
+footer {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: white;
+  height: $footer-height;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Hide the footer when the content is longer than the viewport height */
+#home-page:after,
+#shop-page:after,
+#about-us:after,
+#contact-us-page:after,
+#register-page:after,
+#login-page:after,
+#profile-page:after,
+#favorite-pics-page:after,
+#page-not-found-page:after {
+  content: "";
+  display: block;
+  height: 100px; /* adjust to the height of your footer */
+}
+
 .container {
   flex-direction: column;
+}
+
+// This class is attached to a div that adds some empty space in order to align the start of each page with the header (which is currently positioned as absolute)
+
+.empty {
+  height: $header-height;
 }
 
 // --------------------------------------------------------------------------

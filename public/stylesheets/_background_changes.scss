@@ -1,93 +1,36 @@
-// Define section height
-$section-height: 100vh;
-
-// Define footer height
-$footer-height: 60px;
-
-// Define header height
-$fixed-header-height: 10vh;
-
-// Style for header
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  height: $fixed-header-height;
-}
-
-// Style for main
-main {
-  margin-top: $fixed-header-height;
-}
-
-// Style for section
-section {
-  height: calc(100vh - #{$fixed-header-height} - #{$footer-height});
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-  margin-bottom: -$footer-height; /* adjust 100px to the height of your footer */
-}
-
-// Style for footer
-footer {
-  height: $footer-height;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-
 #home-page {
-  background-image: url("https://images.unsplash.com/photo-1522335789204-472988babdf9");
+  // background-image: url("https://images.unsplash.com/photo-1522335789204-472988babdf9");
+  background-color: random($limit: 1);
 }
 
 #shop-page {
-  background-image: url("https://images.unsplash.com/photo-1534796636918-57a0eb1d3ab6");
+  background-image: url("../assets/images/background-index.webp");
 }
 
 #about-us {
-  background-image: url("https://images.unsplash.com/photo-1535271708531-72a98a0b59d9");
+  background-color: random($limit: 1);
 }
 
 #contact-us-page {
-  background-image: url("https://images.unsplash.com/photo-1522664710239-7c82b306062d");
+  background-color: random($limit: 1);
 }
 
 #register-page {
-  background-image: url("https://images.unsplash.com/photo-1521747116042-5a810fda9662");
+  background-color: random($limit: 1);
 }
 
 #login-page {
-  background-image: url("https://images.unsplash.com/photo-1494790108377-be9c29b29330");
+  background-image: url("../assets/images/background-image.webp");
 }
 
 #profile-page {
-  background-image: url("https://images.unsplash.com/photo-1600286202313-267e3fe2d880");
+  background-color: random($limit: 1);
 }
 
 #favorite-pics-page {
-  background-image: url("https://images.unsplash.com/photo-1614077300241-e6e4b6d6254c");
+  background-color: random($limit: 1);
 }
 
 #page-not-found-page {
-  background-image: url("https://images.unsplash.com/photo-1522930972894-6a4f842ea607");
+  background-color: random($limit: 1);
 }
