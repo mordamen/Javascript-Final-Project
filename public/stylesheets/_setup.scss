@@ -52,13 +52,16 @@ footer {
   border: 1px solid red !important;
 }
 
-#shop-page {
-  flex-direction: column;
-}
-// --------------------------------------------------------------------------
-
 $main-text: white;
 $navbar-height: 6rem;
+
+// This class is attached to a div that adds some empty space in order to align the start of each page with the header (which is currently positioned as absolute)
+
+.empty {
+  height: $navbar-height;
+}
+
+// --------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------
 //Reset
@@ -166,6 +169,7 @@ h2 {
 #homeDisplaySortASC {
   margin-right: 0.3rem;
 }
+
 // --------------------------------------------------------------------------
 // Prefixes for any flexbox needed, as recommended on https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 

@@ -7,19 +7,13 @@
   background-size: cover;
   // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   //   url("../assets/imgs/background-image.webp");
-}
 
-.shop-page {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // Tints the background Image so the rest of the website is more legible:
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/images/background-index.webp");
-}
-
-// This class is attached to a div that adds some empty space in order to align the start of each page with the header (which is currently positioned as absolute)
-
-.empty {
-  height: $navbar-height;
+  #shop-page {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // Tints the background Image so the rest of the website is more legible:
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/images/background-index.webp");
+  }
 }
