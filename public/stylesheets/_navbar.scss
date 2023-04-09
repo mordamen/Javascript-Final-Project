@@ -8,19 +8,6 @@
   }
 }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  height: $navbar-height;
-}
-
 .navbar {
   background-color: transparent !important;
   font-family: Beleren;
