@@ -22,10 +22,6 @@
   }
 }
 
-footer {
-  text-align: center;
-}
-
 #logo {
   width: 5vw;
 }
@@ -45,7 +41,7 @@ footer {
 }
 
 $main-text: white;
-$navbar-height: 6rem;
+$navbar-height: 10vh;
 
 // This class is attached to a div that adds some empty space in order to align the start of each page with the header (which is currently positioned as absolute)
 
@@ -112,6 +108,12 @@ section {
   align-items: center;
   width: 100%;
   margin: auto;
+  min-height: 90vh;
+}
+
+footer {
+  text-align: center;
+  height: 5vh;
 }
 
 .container {
@@ -149,7 +151,7 @@ hr {
 }
 
 .main-section {
-  // height: 95vh;
+  margin: auto;
   align-items: center;
   display: flex;
 }
