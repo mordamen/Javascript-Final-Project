@@ -89,17 +89,30 @@ header {
 
 section {
   min-height: 100vh;
+  padding-bottom: $footer-height;
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: auto;
 }
+
+/* Hide the footer when the content is longer than the viewport height */
+section:after {
+  content: "";
+  // display: none !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footer-height; /* adjust to the height of your footer */
+  border: 1px solid red !important;
+}
+
 // Style for footer
 footer {
   background-size: cover;
@@ -108,7 +121,7 @@ footer {
 
   color: white;
   height: $footer-height;
-  position: fixed;
+  // position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -121,17 +134,6 @@ footer {
   text-align: center;
   background-color: transparent;
   margin: auto;
-}
-
-/* Hide the footer when the content is longer than the viewport height */
-section:after {
-  content: "";
-  display: none !important;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: $footer-height; /* adjust to the height of your footer */
 }
 
 .container {

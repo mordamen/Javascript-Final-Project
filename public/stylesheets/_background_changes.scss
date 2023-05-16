@@ -8,15 +8,15 @@
 }
 
 #about-us {
-  background-color: random($limit: 1);
+  background-color: brown;
 }
 
 #contact-us-page {
-  background-color: random($limit: 1);
+  background-color: purple;
 }
 
 #register-page {
-  background-color: random($limit: 1);
+  background-image: url("../assets/images/background-image.webp");
 }
 
 #login-page {
@@ -24,13 +24,13 @@
 }
 
 #profile-page {
-  background-color: random($limit: 1);
+  background-color: orange;
 }
 
 #favorite-pics-page {
-  background-color: random($limit: 1);
+  background-color: grey;
 }
 
 #page-not-found-page {
-  background-color: random($limit: 1);
+  background-color: grey;
 }
